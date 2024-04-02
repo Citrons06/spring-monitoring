@@ -1,4 +1,6 @@
 management:
+  server:
+    port: 8080
   endpoints:
     web:
       exposure:
@@ -14,8 +16,19 @@ management:
       enabled: true
     env:
       enabled: true
+    git:
+      mode: full
 
 info:
   app:
     name: hello-actuator
     company: yh
+
+logging:
+  level:
+    hello.controller: debug
+
+server:
+  tomcat:
+    mbeanregistry:
+      enabled: true
